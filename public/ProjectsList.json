@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "image": "./Crud.png",
+    "name": "Crud Application",
+    "overview": "This is a full-stack CRUD application built using the MERN (MongoDB, Express.js, React, Node.js) stack. The application allows users to Create, Read, Update, and Delete (CRUD) user data efficiently. It features a dynamic and interactive UI, a secure backend, and seamless database integration.",
+    "technologies": "Frontend: React.js, React Router, Tailwind CSS Backend: Node.js, Express.js Database: MongoDB (Mongoose for schema modeling) tate Management: useState, useEffect, useContext API Communication: Axios for fetching and modifying data",
+    "link": "https://github.com/NitinVk18/CRUD"
+  },
+  {
+    "id": "2",
+    "image": "./PicSphere.jpeg",
+    "name": "PicSpehere",
+    "overview": "This is a photo uploading website built using Node.js, Express.js, MongoDB, and Multer for handling image uploads. The application allows users to create profiles, upload photos, and manage their personal image gallery efficiently.",
+    "technologies": "Frontend: React.js, React Router, Tailwind CSS Backend: Node.js, Express.js Database: MongoDB  Authentication: JWT (JSON Web Token) for secure login",
+    "link": "https://github.com/NitinVk18/PicSphere"
+  },
+  {
+    "image": "./Calculator.png",
+    "id": "3",
+    "name": "Calculator",
+    "overview": "This is a simple calculator application built using ReactJS. It provides a user-friendly interface to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator is designed with a clean UI and real-time result updates.",
+    "technologies": "Frontend: React.js (useState for managing input and results) Styling: CSS",
+    "link": "https://github.com/NitinVk18/Calculator"
+  }
+]
