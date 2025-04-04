@@ -18,7 +18,7 @@ const Contact = () => {
         const result = await response.json();
         if (result.success) {
             alert("Message Sent Successfully!");
-            setFormData({ name: "", email: "", message: "" }); // 🛠️ Form fields reset
+            setFormData({ name: "", email: "", message: "" });
         } else {
             alert("Failed to send message.");
         }
