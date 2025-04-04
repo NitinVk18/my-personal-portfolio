@@ -12,16 +12,18 @@ const BookInfo = ({ item }) => {
   }
 
   return (
-<div className="max-w-5xl mx-auto px-4 my-4">
 <div className="card shadow-xl shadow-neutral-400/30 bg-white dark:bg-slate-800 dark:text-white flex flex-col md:flex-row w-full items-center md:items-stretch p-4 md:p-6 gap-6 rounded-lg">
       
-      <figure className="w-full md:w-1/3 h-60">
-        <img
-          src={item.image || "https://via.placeholder.com/150"}
-          alt={item.name}
-          className="h-full w-auto object-contain rounded-lg p-2 flex items-center justify-center"
-        />
-      </figure>
+<figure className="w-full md:w-1/3">
+  <div className="h-64 w-full flex items-center justify-center bg-white dark:bg-slate-700 rounded-lg overflow-hidden">
+    <img
+      src={item.image || "https://via.placeholder.com/150"}
+      alt={item.name}
+      className="h-full w-full object-cover"
+    />
+  </div>
+</figure>
+
   
       <div className="card-body w-full md:w-2/3 flex flex-col justify-center gap-2">
         <h2 className="text-xl md:text-2xl font-bold">Project: {item.id}</h2>
@@ -43,7 +45,7 @@ const BookInfo = ({ item }) => {
         </div>
       </div>
     </div>
-  </div>
+
   
   );
 };
