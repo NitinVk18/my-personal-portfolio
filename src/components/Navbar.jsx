@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 
 function Navbar() {
   const [navScroll, setNavScroll] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  // Default theme is 'dark' if not set in localStorage
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme : "dark";
+  });
 
   const element = document.documentElement;
 
@@ -82,7 +87,9 @@ function Navbar() {
               {navItems}
             </ul>
           </div>
-          <a className="text-3xl font-bold cursor-pointer text-red-700">Nitin Chamoli</a>
+          <a className="text-3xl font-bold cursor-pointer text-red-700">
+            Nitin Chamoli
+          </a>
         </div>
 
         <div className="navbar-end space-x-3">
