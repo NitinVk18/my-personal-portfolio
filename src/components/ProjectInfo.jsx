@@ -24,7 +24,6 @@ const BookInfo = ({ item }) => {
         />
       </figure>
   
-      {/* Text Content */}
       <div className="card-body w-full md:w-2/3 flex flex-col justify-center gap-2">
         <h2 className="text-xl md:text-2xl font-bold">Project: {item.id}</h2>
         <h2 className="text-2xl md:text-xl font-semibold">{item.name}</h2>
