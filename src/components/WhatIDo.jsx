@@ -7,22 +7,22 @@ const WhatIDo = () => {
     {
       title: "Front-End Development",
       description: "Crafting dynamic, responsive, and user-friendly interfaces with React, Tailwind CSS, and JavaScript to deliver seamless user experiences.",
-      image: "./public/frontend.webp"
+      image: "/frontend.webp"
     },
     {
       title: "Back-End Development",
       description: "Building robust, scalable APIs and handling efficient database management using Node.js, Express.js, and MongoDB, ensuring high performance and security.",
-      image: "./public/backend.webp"
+      image: "/backend.webp"
     },
     {
       title: "Full-Stack Expertise",
       description: "Combining both front-end and back-end skills to deliver end-to-end solutions, from UI to database with seamless integration.",
-      image: "./public/fullStack.webp"
+      image: "/fullStack.webp"
     },
     {
       title: "Others",
       description: "WebSockets (Socket.io), REST APIs, Authentication (JWT), Git/GitHub.",
-      image: "./public/others.webp"
+      image: "/others.webp"
     }
   ];
 
