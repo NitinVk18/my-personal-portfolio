@@ -8,20 +8,38 @@ const Contact = () => {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
-        const response = await fetch("https://my-personal-portfolio-gamma-ten.vercel.app/api/send-email", {
+      
+        try {
+          const response = await fetch("https://my-personal-portfolio-gamma-ten.vercel.app/api/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
-        });
-        const result = await response.json();
-        if (result.success) {
+          });
+      
+          const contentType = response.headers.get("content-type");
+      
+          if (!response.ok) {
+            const errorText = await response.text(); // fallback if not JSON
+            console.error("Server error:", errorText);
+            alert("Something went wrong: " + errorText);
+            return;
+          }
+      
+          const result = contentType && contentType.includes("application/json")
+            ? await response.json()
+            : {};
+      
+          if (result.success) {
             alert("Message Sent Successfully!");
             setFormData({ name: "", email: "", message: "" });
-        } else {
+          } else {
             alert("Failed to send message.");
+          }
+        } catch (err) {
+          console.error("Unexpected error:", err);
+          alert("Unexpected error: " + err.message);
         }
-    };
+      };
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
             <div className="max-w-2xl w-full p-8 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 rounded-2xl shadow-lg mt-32">
