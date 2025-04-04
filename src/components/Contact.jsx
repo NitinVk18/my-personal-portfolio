@@ -9,7 +9,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        const response = await fetch("https://your-vercel-project-name.vercel.app/api/send-email", {
+        const response = await fetch("https://my-personal-portfolio-gamma-ten.vercel.app/api/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
