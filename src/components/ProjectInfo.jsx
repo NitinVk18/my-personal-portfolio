@@ -1,7 +1,6 @@
 import React from 'react';
 
 const BookInfo = ({ item }) => {
-  // Fallback if item is undefined
   if (!item) {
     return (
       <div className="max-w-xs mx-auto">
@@ -13,10 +12,10 @@ const BookInfo = ({ item }) => {
   }
 
   return (
-    <div className="w-full mx-auto my-4">
-<div className="card shadow-lg bg-white dark:bg-slate-800 dark:text-white flex flex-col md:flex-row w-full items-center md:items-stretch p-4 md:p-6 gap-6 rounded-lg">
+<div className="max-w-5xl mx-auto px-4 my-4">
+<div className="card shadow-xl shadow-neutral-400/30 bg-white dark:bg-slate-800 dark:text-white flex flex-col md:flex-row w-full items-center md:items-stretch p-4 md:p-6 gap-6 rounded-lg">
       
-      <figure className="w-full md:w-1/3 h-80">
+      <figure className="w-full md:w-1/3 h-60">
         <img
           src={item.image || "https://via.placeholder.com/150"}
           alt={item.name}
