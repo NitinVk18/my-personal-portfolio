@@ -11,7 +11,7 @@ const CoursesContent = () => {
           <span className="text-pink-500 dark:text-pink-400"> :)</span>
         </h1>
         <br />
-        <h1 className="text-center md:text-left">
+        <h1 className="text-left">
           For More check My
           <a
             href="https://github.com/NitinVk18"

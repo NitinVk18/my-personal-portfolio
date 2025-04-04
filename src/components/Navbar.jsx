@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 
 function Navbar() {
   const [navScroll, setNavScroll] = useState(false);
-
-  // Default theme is 'dark' if not set in localStorage
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme ? savedTheme : "dark";
@@ -12,12 +10,21 @@ function Navbar() {
   const element = document.documentElement;
 
   useEffect(() => {
-    if (theme === "dark") {
+    const isSmallOrMedium = window.innerWidth < 1024;
+
+    if (isSmallOrMedium) {
+      // Force dark theme on small and medium devices
       element.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
-      element.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+      // Respect saved preference on large devices
+      if (theme === "dark") {
+        element.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        element.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
     }
   }, [theme]);
 
@@ -62,20 +69,20 @@ function Navbar() {
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-  xmlns="http://www.w3.org/2000/svg"
-  className="h-5 w-5 text-black dark:text-white"  // ✅ correct color for both themes
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke="currentColor"
->
-  <path
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    strokeWidth="2"
-    d="M4 6h16M4 12h8m-8 6h16"
-  />
-</svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-black dark:text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
             </div>
             <ul
               tabIndex={0}
@@ -87,8 +94,8 @@ function Navbar() {
               {navItems}
             </ul>
           </div>
-          <a className="text-3xl font-bold cursor-pointer text-red-700">
-            Nitin Chamoli
+          <a className="text-3xl font-bold cursor-pointer text-red-700 whitespace-nowrap md:text-center">
+          Nitin Chamoli
           </a>
         </div>
 
@@ -97,7 +104,8 @@ function Navbar() {
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
           </div>
 
-          <label className="toggle text-base-content">
+          {/* Show theme toggle only on large and above */}
+          <label className="toggle text-base-content hidden lg:flex">
             <input
               type="checkbox"
               className="theme-controller"

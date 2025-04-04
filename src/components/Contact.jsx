@@ -42,7 +42,7 @@ const Contact = () => {
       };
     return (
 <div className="flex items-center justify-center bg-gray-100 dark:bg-gray-900 transition-colors duration-300 py-16 px-4 mb-0">
-<div className="max-w-2xl w-full p-8 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 rounded-2xl shadow-lg mt-32">
+<div className="max-w-2xl w-full p-8 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 rounded-2xl shadow-lg mt-6">
                 <h2 className="text-3xl font-bold mb-6 text-center">Let's Connect! 🚀</h2>
                 <form onSubmit={handleSubmit} className="space-y-4 ">
                     <div>
