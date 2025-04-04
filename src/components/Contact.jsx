@@ -9,12 +9,11 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        const response = await fetch("http://localhost:5000/send-email", {
+        const response = await fetch("https://your-vercel-project-name.vercel.app/api/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
         });
-    
         const result = await response.json();
         if (result.success) {
             alert("Message Sent Successfully!");
