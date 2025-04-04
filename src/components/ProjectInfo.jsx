@@ -5,7 +5,7 @@ const BookInfo = ({ item }) => {
   if (!item) {
     return (
       <div className="max-w-xs mx-auto">
-        <div className="card shadow-2xl bg-base-200 w-full flex items-center justify-center py-12 px-4 rounded-lg">
+        <div className="card shadow-2xl bg-base-200 w-full flex items-center justify-center py-4 px-4 rounded-lg">
           <p className="text-gray-600 dark:text-gray-300">No book data available.</p>
         </div>
       </div>
