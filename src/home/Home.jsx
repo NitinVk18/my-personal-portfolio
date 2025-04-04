@@ -31,8 +31,12 @@ const Home = () => {
 
       {isMobileOrTablet && (
         <>
-          <ProjectInfo />
-          <AboutContent />
+          <div className="mt-2 px-0 mx-0">
+            <ProjectInfo />
+          </div>
+          <div className="mt-2 px-4">
+            <AboutContent />
+          </div>
           <Contact />
         </>
       )}
