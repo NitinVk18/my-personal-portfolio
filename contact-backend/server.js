@@ -10,14 +10,16 @@ app.use(express.json()); // Parses JSON data
 app.post("/send-email", async (req, res) => {
     const { name, email, message } = req.body;
 
-    // Nodemailer Transporter
     let transporter = nodemailer.createTransport({
-        service: "gmail",
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
         auth: {
-            user: process.env.EMAIL, // Your email
-            pass: process.env.PASSWORD, // Your email password or App Password
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
         },
     });
+    
 
     let mailOptions = {
         from: email,

@@ -6,24 +6,23 @@ const Contact = () => {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         const response = await fetch("http://localhost:5000/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
         });
-
+    
         const result = await response.json();
         if (result.success) {
             alert("Message Sent Successfully!");
+            setFormData({ name: "", email: "", message: "" }); // 🛠️ Form fields reset
         } else {
             alert("Failed to send message.");
         }
     };
-
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
             <div className="max-w-2xl w-full p-8 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 rounded-2xl shadow-lg mt-32">
