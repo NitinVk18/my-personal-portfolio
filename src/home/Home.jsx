@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import WelcomePage from '../components/WelcomePage';
-import WhatIDo from '../components/WhatIDo';
-import AboutContent from '../components/AboutContent';
-import ProjectInfo from '../components/ProjectContent';
-import Contact from '../components/Contact';
+import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import WelcomePage from "../components/WelcomePage";
+import WhatIDo from "../components/WhatIDo";
+import AboutContent from "../components/AboutContent";
+import ProjectInfo from "../components/ProjectContent";
+import Contact from "../components/Contact";
 
 const Home = () => {
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileOrTablet(window.innerWidth <= 768); 
+      setIsMobileOrTablet(window.innerWidth <= 768);
     };
 
-    handleResize(); 
-    window.addEventListener('resize', handleResize); 
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -31,12 +31,10 @@ const Home = () => {
 
       {isMobileOrTablet && (
         <>
-          <div className="mt-2 px-0 mx-0">
-            <ProjectInfo />
-          </div>
-          <div className="mt-2 px-4">
-            <AboutContent />
-          </div>
+          <ProjectInfo />
+
+          <AboutContent />
+
           <Contact />
         </>
       )}

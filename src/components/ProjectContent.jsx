@@ -4,7 +4,7 @@ import List from '../../public/ProjectsList.json';
 
 const CoursesContent = () => {
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-16 flex flex-col md:flex-row bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
+    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-16 flex flex-col md:flex-row bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
       <div className="max-w-screen-2xl mx-auto px-4 pt-16 w-full">
         <h1 className="text-4xl font-bold text-center md:text-left mx-auto my-auto">
           Some of My Projects

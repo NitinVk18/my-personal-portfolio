@@ -4,7 +4,7 @@ import WelcomeImage from '/WelcomeImage2.jpg';
 const Banner = () => {
   return (
     <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-16 flex flex-col-reverse md:flex-row items-center md:items-start gap-2 
-      bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
+      bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
       
       <div className="w-full md:w-1/2 mt-6 md:mt-16 text-center md:text-left">
         <h1 className="text-4xl font-bold">

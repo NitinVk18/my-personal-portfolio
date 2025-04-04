@@ -27,7 +27,7 @@ const WhatIDo = () => {
   ];
 
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-6 pb-6">
+    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-6 pb-6 bg-gray-100">
       <div className='my-4'>
         <h1 className="font-bold text-3xl pb-8 text-red-700">What I Do</h1>
         <div className="grid md:grid-cols-2 gap-8">
