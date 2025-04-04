@@ -3,7 +3,7 @@
     "id": "1",
     "image": "./Crud.png",
     "name": "Crud Application",
-    "overview": "This is a full-stack CRUD application built using the MERN (MongoDB, Express.js, React, Node.js) stack. The application allows users to Create, Read, Update, and Delete (CRUD) user data efficiently. It features a dynamic and interactive UI, a secure backend, and seamless database integration.",
+    "overview": "This is a full-stack CRUD application built using the MERN stack. The application allows users to Create, Read, Update, and Delete user data efficiently. It features a dynamic and interactive UI, a secure backend, and seamless database integration.",
     "technologies": "Frontend: React.js, React Router, Tailwind CSS Backend: Node.js, Express.js Database: MongoDB (Mongoose for schema modeling) tate Management: useState, useEffect, useContext API Communication: Axios for fetching and modifying data",
     "link": "https://github.com/NitinVk18/CRUD"
   },
@@ -16,8 +16,16 @@
     "link": "https://github.com/NitinVk18/PicSphere"
   },
   {
+  "image": "./chatApp.jpg",
+  "id": "3",
+  "name": "Chat Application",
+  "overview": "It allows multiple users to join a chat room, send messages instantly, and see the live member count. The app ensures seamless communication by handling multiple connections efficiently. Perfect for understanding real-time messaging systems like WhatsApp group chats.",
+  "technologies": "WebSockets, Node.js, Express, HTML, CSS, and JavaScript.",
+  "link": "https://github.com/NitinVk18/Chat-App"
+},
+  {
     "image": "./Calculator.png",
-    "id": "3",
+    "id": "4",
     "name": "Calculator",
     "overview": "This is a simple calculator application built using ReactJS. It provides a user-friendly interface to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator is designed with a clean UI and real-time result updates.",
     "technologies": "Frontend: React.js (useState for managing input and results) Styling: CSS",

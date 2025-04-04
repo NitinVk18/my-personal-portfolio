@@ -2,7 +2,7 @@ import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from './home/Home'
 import Projects from './course/Projects'
-import SignUp from './components/SignUp'
+import About from './about/About'
 import ContactPage from './contact/ContactPage'
 
 const App = () => {
@@ -13,8 +13,8 @@ const App = () => {
    <Routes>
     <Route  path="/" element={<Home />}/>
     <Route  path="/projects" element={<Projects />}/>
-    <Route  path="/signup" element={<SignUp />}/>
     <Route  path="/contact" element={<ContactPage />}/>
+    <Route  path="/about" element={<About/>}/>
    </Routes>
     </div>
     </>
